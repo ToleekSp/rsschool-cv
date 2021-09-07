@@ -20,3 +20,14 @@ Interested to work as a Programmer in your esteemed organization skills where I 
 - working with CMS 1c-Bitrix for over 13 years
 - development of fully functional online stores with 1C-Bitrix
 - new engine D7 for CMS Bitrix
+
+## Work Experience
+
+1. 2011 - 2015 Omniweb  
+   development and maintenance of Internet projects  
+   implementation and testing of projects  
+   ведение проектной документации
+   
+2. 2015 - 2021 Seemetric  
+   development and maintenance of online stores using CMS 1C-bitrix
+
