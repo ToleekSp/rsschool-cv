@@ -1,1 +1,0 @@
-https://toleeksp.github.io/rsschool-cv/cv
