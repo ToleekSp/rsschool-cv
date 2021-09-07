@@ -31,3 +31,20 @@ Interested to work as a Programmer in your esteemed organization skills where I 
 2. 2015 - 2021 Seemetric  
    development and maintenance of online stores using CMS 1C-bitrix
 
+## Education
+
+Moscow State University of Instrument Engineering and Informatics (2010)  
+Received a diploma with honors
+
+## Code example
+
+```javascript
+function createPhoneNumber(numbers){
+  numbers = numbers.join('');
+  return `(${numbers.slice(0,3)}) ${numbers.slice(3,6)}-${numbers.slice(6)}`;
+}
+```
+
+## English
+
+A2
