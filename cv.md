@@ -39,9 +39,10 @@ Received a diploma with honors
 ## Code example
 
 ```javascript
-function createPhoneNumber(numbers){
-  numbers = numbers.join('');
-  return `(${numbers.slice(0,3)}) ${numbers.slice(3,6)}-${numbers.slice(6)}`;
+function maxSum(root) {
+    if (!root) return 0
+
+    return root.value + Math.max(maxSum(root.left), maxSum(root.right))
 }
 ```
 
