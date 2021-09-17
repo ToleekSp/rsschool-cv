@@ -1,0 +1,161 @@
+@charset "UTF-8";
+
+html, body {
+	margin: 0;
+	padding: 0;
+}
+
+html{
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+body{
+	font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  color: #7E7E7E;
+  background: #E5E5E5;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+*,
+*::before,
+*::after{
+    -webkit-box-sizing: inherit;
+            box-sizing: inherit;
+			outline: none;
+}
+
+h1 {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #424242;
+  margin: 0 0 5px;
+}
+
+.wrap {
+    max-width: 1024px;
+    padding: 20px;
+    margin: 0 auto;
+    background: #ffffff;
+}
+
+.dot {
+  display: inline-block;
+  width: 2px;
+  height: 2px;
+  background: #424242;
+  border-radius: 50%;
+  margin: 0 4px;
+}
+
+.column {
+  display: flex;
+  column-gap: 15px;
+}
+
+.info {
+  width: 30%;
+}
+
+.info__inner {
+  padding: 15px;
+  margin-top: 70px;
+  padding-top: 100px;
+  color: #424242;
+  position: relative;
+  background: #D8ECFF;
+}
+
+.info__avatar {
+  width: 140px;
+  height: 140px;
+  position: absolute;
+  left: 50%;
+  margin-left: -70px;
+  top: -70px;
+  border-radius: 50%;
+  border: 3px solid #FFFFFF;
+  overflow: hidden;
+}
+
+.info__prof {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+  font-size: 10px;
+}
+
+.info-block {
+  margin-bottom: 30px;
+}
+
+.info-block__title {
+  font-family: Montserrat;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 14px;
+  text-align: center;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 10px;
+  background: #424242;
+  color: #ffffff;
+  margin-bottom: 15px;
+}
+
+.info__contacts {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.info__contacts-item {
+  letter-spacing: 0.04em;
+  padding-left: 30px;
+  background-repeat: no-repeat;
+  background-position: left center / 16px 16px;
+  margin-bottom: 15px;
+}
+
+.info__contacts-link {
+  color: #424242;
+  text-decoration: none;
+}
+
+.info__contacts-link:hover {
+  text-decoration: underline;
+}
+
+.info__contacts-birthday {
+  background-image: url('./images/svg/cake.svg');
+}
+
+.info__contacts-phone {
+  background-image: url('./images/svg/phone.svg');
+}
+
+.info__contacts-email {
+  background-image: url('./images/svg/email.svg');
+}
+
+.info__contacts-location {
+  background-image: url('./images/svg/room.svg');
+}
+
+.content {
+  width: 70%;
+  background: #ffffff;
+}
