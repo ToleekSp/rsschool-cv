@@ -8,7 +8,10 @@ html, body {
 html{
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
+            scroll-behavior: smooth;
 }
+
+
 
 body{
 	font-family: 'Open Sans', sans-serif;
@@ -53,6 +56,8 @@ ol > li {
     padding: 20px;
     margin: 0 auto;
     background: #ffffff;
+    position: relative;
+    overflow: hidden;
 }
 
 .dot {
@@ -64,6 +69,124 @@ ol > li {
   margin: 0 4px;
 }
 
+.header-burger {
+  width: 20px;
+  height: 14px;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+.header-burger:after,
+.header-burger:before,
+.header-burger span {
+	content: '';
+	display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #000;
+  position: absolute;
+  left: 0;
+}
+
+.header-burger:before {
+	top: 0;
+}
+
+.header-burger span {
+	top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.header-burger:after {
+	bottom: 0;
+}
+
+.page-menu {
+  position: absolute;
+  width: 300px;
+  height: 100%;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 10;
+  padding: 50px 20px 20px;
+  -webkit-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
+  transform: translateX(-100%);
+  -webkit-transition: .2s all linear;
+  -o-transition: .2s all linear;
+  transition: .2s all linear;
+  overflow: hidden;
+  overflow-y: auto;
+  overflow-x: hidden;
+  background: #424242;
+  color: #ffffff;
+  border: 0;
+}
+
+.page-menu.active {
+  -webkit-transform: translateX(0);
+  -ms-transform: translateX(0);
+  transform: translateX(0);
+}
+
+.page-menu__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.page-menu__item {
+  margin-bottom: 10px;
+}
+
+.page-menu__link {
+  font-size: 14px;
+  line-height: 20px;
+  color: #ffffff;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.page-menu__link:hover {
+  text-decoration: underline;
+}
+
+.menu-close {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 11;
+}
+
+.menu-close:before,
+.menu-close:after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #fff;
+  position: absolute;
+  top: 50%;
+}
+
+.menu-close:before {
+  -webkit-transform: translateY(-50%) rotate(45deg);
+  -ms-transform: translateY(-50%) rotate(45deg);
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.menu-close:after {
+  -webkit-transform: translateY(-50%) rotate(-45deg);
+  -ms-transform: translateY(-50%) rotate(-45deg);
+  transform: translateY(-50%) rotate(-45deg);
+}
+
 .column {
   display: flex;
   column-gap: 30px;
@@ -71,15 +194,15 @@ ol > li {
 
 .info {
   width: 30%;
+  background: #D8ECFF;
+  margin-top: 70px;
 }
 
 .info__inner {
   padding: 15px;
-  margin-top: 70px;
   padding-top: 100px;
   color: #424242;
   position: relative;
-  background: #D8ECFF;
 }
 
 .info__avatar {
@@ -94,6 +217,10 @@ ol > li {
   overflow: hidden;
 }
 
+.info__avatar-desc {
+  display: none;
+}
+
 .info__prof {
   display: flex;
   align-items: center;
@@ -103,7 +230,7 @@ ol > li {
 }
 
 .info-block {
-  margin-bottom: 30px;
+  margin-bottom: 50px;
 }
 
 .info-block:last-child {
@@ -225,6 +352,11 @@ ol > li {
   padding: 15px 0 10px;
 }
 
+
+.content__block:last-child {
+  margin-bottom: 0;
+}
+
 .content__block-title {
   font-family: Montserrat;
   font-weight: 600;
@@ -257,6 +389,7 @@ ol > li {
 
 .project-list {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
   gap: 20px;
 }
@@ -266,7 +399,7 @@ ol > li {
 }
 
 .project-list__item {
-  width: 33%;
+  width: 31.33%;
   border: 1px solid rgba(66, 66, 66, 0.2);
   padding: 15px;
   display: flex;
@@ -286,4 +419,52 @@ ol > li {
 
 .project-item__name {
   font-weight: bold;
+}
+
+@media(max-width: 980px)
+{
+  .info {
+    width: 50%;
+  }
+
+  .content {
+    width: 50%;
+  }
+}
+
+@media(max-width: 580px)
+{
+  .column {
+    display: block;
+  }
+
+  .page-menu {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    overflow-x: auto;
+  }
+
+  .info {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .info-block {
+    margin-bottom: 20px;
+  }
+
+  .content {
+    width: 100%;
+  }
+
+  .content__block {
+    margin-bottom: 15px;
+    border-top: 2px solid rgba(66, 66, 66, 0.2);
+    padding: 10px 0 5px;
+  }
+
+  .project-list__item {
+    width: 100%;
+  }
 }
